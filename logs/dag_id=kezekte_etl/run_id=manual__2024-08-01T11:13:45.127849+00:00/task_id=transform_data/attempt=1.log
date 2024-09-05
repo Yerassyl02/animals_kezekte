@@ -1,0 +1,1070 @@
+[2024-08-01T11:13:56.422+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-01T11:13:56.448+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kezekte_etl.transform_data manual__2024-08-01T11:13:45.127849+00:00 [queued]>
+[2024-08-01T11:13:56.460+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kezekte_etl.transform_data manual__2024-08-01T11:13:45.127849+00:00 [queued]>
+[2024-08-01T11:13:56.461+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-01T11:13:56.469+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform_data> on 2024-08-01 11:13:45.127849+00:00
+[2024-08-01T11:13:56.497+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=885) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-08-01T11:13:56.498+0000] {standard_task_runner.py:63} INFO - Started process 887 to run task
+[2024-08-01T11:13:56.498+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'kezekte_etl', 'transform_data', 'manual__2024-08-01T11:13:45.127849+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/kezekte_etl.py', '--cfg-path', '/tmp/tmp9fmetzx2']
+[2024-08-01T11:13:56.500+0000] {standard_task_runner.py:91} INFO - Job 110: Subtask transform_data
+[2024-08-01T11:13:56.534+0000] {task_command.py:426} INFO - Running <TaskInstance: kezekte_etl.transform_data manual__2024-08-01T11:13:45.127849+00:00 [running]> on host cd4398d9193e
+[2024-08-01T11:13:56.577+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kezekte_etl' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2024-08-01T11:13:45.127849+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-01T11:13:45.127849+00:00'
+[2024-08-01T11:13:56.579+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-01T11:13:56.603+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.606+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550632', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189656', '01.08.2024 16:13:10', '13.02.2020', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.607+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.611+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.612+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259925', 'Собака', 'Аю', 'Самец', 'Беспородная', 'KZD010824-0189655', '01.08.2024 16:12:26', '10.03.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'Коммунальное государственное предприятие «Ветеринарная станция Амангельдинского района» Управления ветеринарии акимата Костанайской области', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Амангельдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.613+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.615+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.617+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550631', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189654', '01.08.2024 16:11:02', '27.06.2018', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.617+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.620+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.621+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000081344', 'Кошка', 'Мила', 'Самка', 'Беспородная', 'KZC010824-0080733', '01.08.2024 16:10:55', '01.07.2023', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Бостандыкский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.621+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.624+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.625+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550630', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189653', '01.08.2024 16:09:06', '20.06.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.626+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.630+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.635+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550629', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189652', '01.08.2024 16:07:48', '05.02.2021', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.635+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.641+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.643+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550628', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189651', '01.08.2024 16:06:32', '07.02.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.643+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.647+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.649+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550627', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189650', '01.08.2024 16:05:29', '30.07.2009', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.650+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.653+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.654+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550626', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189649', '01.08.2024 16:04:18', '20.06.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.655+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.657+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.659+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550625', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189648', '01.08.2024 16:02:51', '20.06.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.659+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.663+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.665+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259929', 'Собака', 'Кутжол', 'Самец', 'Беспородная', 'KZD010824-0189647', '01.08.2024 15:56:49', '23.05.2020', 'Активный', 'Владелец животного', 'Мечение животного', 'Коммунальное государственное предприятие «Ветеринарная станция Амангельдинского района» Управления ветеринарии акимата Костанайской области', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Амангельдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.666+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.672+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.673+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259437', 'Собака', '9437', 'Самка', 'Беспородная', 'KZD300724-0189646', '01.08.2024 15:47:42', '30.11.2023', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '30.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.674+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.677+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.678+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550624', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189645', '01.08.2024 15:46:06', '07.02.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.678+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.680+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.681+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550623', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189644', '01.08.2024 15:44:41', '08.02.2024', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.682+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.684+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.685+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550622', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189643', '01.08.2024 15:43:19', '17.06.2009', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.686+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.688+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.689+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550621', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189642', '01.08.2024 15:42:09', '27.06.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.689+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.692+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.693+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550620', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189641', '01.08.2024 15:40:56', '20.06.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.693+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.695+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.696+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550619', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189640', '01.08.2024 15:39:41', '24.07.2015', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.696+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.698+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.700+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550618', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189639', '01.08.2024 15:38:23', '13.06.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.700+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.702+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.703+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550617', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189638', '01.08.2024 15:37:13', '15.01.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.704+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.706+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.706+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259290', 'Собака', '9290', 'Самка', 'Беспородная', 'KZD310724-0189637', '01.08.2024 15:35:42', '30.11.2023', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '31.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.707+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.709+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.710+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550616', 'Собака', '-', 'Самка', 'Беспородная', 'KZD010824-0189636', '01.08.2024 15:35:31', '19.06.2019', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.710+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.713+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.714+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550615', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189635', '01.08.2024 15:34:19', '06.02.2020', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.714+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.716+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.718+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000550614', 'Собака', '-', 'Самец', 'Беспородная', 'KZD010824-0189634', '01.08.2024 15:32:07', '06.03.2020', 'Черновик', 'Бродячее', 'Мечение животного', 'КГП на ПХВ "Глубокое-Вет" управления сельского хозяйства Восточно-Казахстанской области', 'Пункт временного содержания животных', '01.08.2024', 'Глубоковский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.718+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.720+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.721+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259295', 'Собака', '9295', 'Самка', 'Беспородная', 'KZD300724-0189633', '01.08.2024 15:29:31', '10.01.2024', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '30.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.721+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.724+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.725+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000266041', 'Собака', 'Найда', 'Самец', 'Беспородная', 'KZD010824-0189633', '01.08.2024 15:15:15', '15.02.2024', 'Черновик', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ «Мугалжарская районная ветеринарная станция» государственного учреждения «Управление ветеринарии Актюбинской области»', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Мугалжарский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.725+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.727+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.728+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000266040', 'Собака', 'Рекс', 'Самец', 'Беспородная', 'KZD010824-0189632', '01.08.2024 15:13:27', '13.06.2024', 'Черновик', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ «Мугалжарская районная ветеринарная станция» государственного учреждения «Управление ветеринарии Актюбинской области»', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Мугалжарский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.728+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.730+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.731+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000095282', 'Собака', 'Юкки', 'Самка', 'Акита ину', 'KZD010824-0189631', '01.08.2024 14:42:35', '04.01.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'ВЕТ ПЛЮС', 'Ветеринарная клиника', '01.08.2024', 'Бостандыкский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.732+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.734+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.735+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259291', 'Собака', '9291', 'Самка', 'Беспородная', 'KZD300724-0189629', '01.08.2024 14:13:51', '29.02.2024', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '30.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.735+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.737+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.738+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259305', 'Собака', '9305', 'Самка', 'Беспородная', 'KZD300724-0189628', '01.08.2024 14:07:14', '30.07.2023', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '30.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.739+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.740+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.741+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259303', 'Собака', '9303', 'Самка', 'Беспородная', 'KZD310724-0189627', '01.08.2024 14:03:34', '31.12.2023', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '31.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.742+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.744+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.745+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000242283', 'Собака', 'Бакс', 'Самец', 'Лабрадор Ретривер', 'KZD010824-0189630', '01.08.2024 14:01:06', '10.08.2022', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.746+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.748+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.749+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259304', 'Собака', '9304', 'Самка', 'Беспородная', 'KZD300724-0189625', '01.08.2024 13:56:54', '04.07.2023', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '30.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.749+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.753+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.755+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476472', 'Собака', 'Барыс', 'Самец', 'Беспородная', 'KZD010824-0189624', '01.08.2024 13:52:43', '01.12.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.756+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.759+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.760+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000081345', 'Кошка', 'Муся', 'Самец', 'Беспородная', 'KZC010824-0080732', '01.08.2024 13:51:36', '01.03.2023', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Бостандыкский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.761+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.763+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.764+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476470', 'Собака', 'Белка', 'Самец', 'Беспородная', 'KZD010824-0189623', '01.08.2024 13:49:34', '22.11.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.765+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.767+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.768+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000081346', 'Кошка', 'Чэлси', 'Самка', 'кошка шотландская', 'KZC010824-0080731', '01.08.2024 13:48:48', '10.08.2019', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Ауэзовский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.768+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.770+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.771+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476476', 'Собака', 'Синеглас', 'Самец', 'Беспородная', 'KZD010824-0189622', '01.08.2024 13:46:27', '06.09.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.772+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.774+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.775+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000081348', 'Кошка', 'Лиза', 'Самка', 'Беспородная', 'KZC010824-0080730', '01.08.2024 13:43:48', '01.07.2022', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Жетысуский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.775+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.777+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.778+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476484', 'Собака', 'Тигр', 'Самец', 'Беспородная', 'KZD010824-0189621', '01.08.2024 13:43:20', '14.02.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.779+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.781+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.782+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476477', 'Собака', 'Лайка', 'Самка', 'Беспородная', 'KZD010824-0189620', '01.08.2024 13:40:06', '14.02.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.783+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.785+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.786+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000081347', 'Кошка', 'Боня', 'Самка', 'Беспородная', 'KZC010824-0080729', '01.08.2024 13:39:47', '15.06.2020', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Медеуский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.786+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.788+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.789+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476474', 'Собака', 'Карабай', 'Самец', 'Беспородная', 'KZD010824-0189619', '01.08.2024 13:37:11', '09.12.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.790+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.791+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.792+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000081225', 'Кошка', 'Марошка', 'Самка', 'Беспородная', 'KZC010824-0080728', '01.08.2024 13:36:13', '16.06.2023', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Алатауский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.793+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.795+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.796+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476473', 'Собака', 'Акбас', 'Самец', 'Беспородная', 'KZD010824-0189618', '01.08.2024 13:34:09', '26.07.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.796+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.798+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.799+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476478', 'Собака', 'Аю', 'Самец', 'Беспородная', 'KZD010824-0189617', '01.08.2024 13:31:16', '01.04.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.800+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.802+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.803+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000081343', 'Кошка', 'Чипуся', 'Самка', 'Беспородная', 'KZC010824-0080726', '01.08.2024 13:30:56', '25.12.2023', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Турксибский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.803+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.805+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.807+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476483', 'Собака', 'Алпауыз', 'Самец', 'Беспородная', 'KZD010824-0189616', '01.08.2024 13:28:12', '13.04.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.807+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.809+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.810+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476481', 'Собака', 'Ками', 'Самка', 'Беспородная', 'KZD010824-0189615', '01.08.2024 13:24:48', '20.09.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.810+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.812+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.814+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000331392', 'Собака', 'Белый', 'Самец', 'Восточноевропейская овчарка', 'KZD010824-0189614', '01.08.2024 13:24:14', '10.11.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Бостандыкский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.814+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.816+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.817+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000061716', 'Кошка', 'Семь', 'Самец', 'Сиамская кошка', 'KZC010824-0080727', '01.08.2024 13:23:40', '28.11.2022', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.817+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.819+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.820+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259292', 'Собака', '9292', 'Самец', 'Беспородная', 'KZD010824-0189613', '01.08.2024 13:18:50', '21.09.2022', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '01.08.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.821+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.823+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.824+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000081281', 'Кошка', 'Сары', 'Самка', 'Беспородная', 'KZC010824-0080724', '01.08.2024 13:11:28', '18.10.2023', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Бостандыкский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.824+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.826+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.827+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000061715', 'Кошка', 'Маркизка', 'Самка', 'Беспородная', 'KZC010824-0080723', '01.08.2024 13:11:15', '10.04.2020', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.827+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.829+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.830+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000141060', 'Кошка', 'Мелкая', 'Самка', 'Беспородная', 'KZC010824-0080722', '01.08.2024 13:08:22', '08.07.2022', 'Черновик', 'Волонтер', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Алмалинский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.831+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.833+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.834+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000328255', 'Собака', 'Ася', 'Самка', 'Беспородная', 'KZD010824-0189612', '01.08.2024 13:05:58', '21.03.2021', 'Черновик', 'Волонтер', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Наурызбайский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.834+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.836+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.837+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000239020', 'Собака', 'Альфа', 'Самка', 'Беспородная', 'KZD010824-0189611', '01.08.2024 12:56:36', '01.04.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Нұра р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.838+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.840+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.841+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000239149', 'Собака', 'Құтжол', 'Самец', 'Алабай (Среднеазиатская овчарка, Тобет, Туркменский Волкодав)', 'KZD010824-0189610', '01.08.2024 12:56:09', '09.06.2022', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Есиль р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.841+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.843+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.844+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000328254', 'Собака', 'Додо', 'Самка', 'Беспородная', 'KZD010824-0189609', '01.08.2024 12:50:52', '22.02.2022', 'Черновик', 'Волонтер', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Наурызбайский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.845+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.847+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.848+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000328253', 'Собака', 'Роза', 'Самка', 'Беспородная', 'KZD010824-0189608', '01.08.2024 12:46:20', '05.08.2023', 'Черновик', 'Волонтер', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Наурызбайский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.848+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.850+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.851+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000328252', 'Собака', 'Гриша', 'Самец', 'Беспородная', 'KZD010824-0189607', '01.08.2024 12:44:22', '05.08.2023', 'Черновик', 'Волонтер', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Наурызбайский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.852+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.856+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.858+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000328251', 'Собака', 'Самсон', 'Самец', 'Беспородная', 'KZD010824-0189606', '01.08.2024 12:40:33', '06.04.2020', 'Черновик', 'Волонтер', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Наурызбайский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.859+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.863+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.864+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000061652', 'Кошка', 'Бомжиха', 'Самка', 'Беспородная', 'KZC010824-0080721', '01.08.2024 12:39:49', '02.02.2022', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.865+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.867+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.868+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259297', 'Собака', '9297', 'Самка', 'Беспородная', 'KZD300724-0189605', '01.08.2024 12:33:55', '21.04.2023', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '30.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.868+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.871+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.872+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000062326', 'Кошка', 'Сара', 'Самка', 'Беспородная', 'KZC010824-0080720', '01.08.2024 12:31:46', '29.03.2022', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Есиль р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.872+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.874+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.875+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000062050', 'Кошка', 'Мия', 'Самец', 'Беспородная', 'KZC010824-0080719', '01.08.2024 12:30:02', '01.10.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.876+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.878+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.879+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000062364', 'Кошка', 'Даша', 'Самец', 'Беспородная', 'KZC010824-0080718', '01.08.2024 12:20:38', '08.03.2021', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Алматы р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.879+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.881+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.882+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000361171', 'Собака', 'Джонни', 'Самец', 'Беспородная', 'KZD010824-0189604', '01.08.2024 12:13:51', '01.05.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'ИП Лазаренко Вячеслав Анатольевич', 'Ветеринарная клиника', '01.08.2024', 'Усть-Каменогорск г.а.', '01.08.2024', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.883+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.884+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.885+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000062284', 'Кошка', 'Катя', 'Самка', 'Беспородная', 'KZC010824-0080717', '01.08.2024 12:09:25', '01.05.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Есиль р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.886+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.888+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.889+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000100307', 'Кошка', 'Чуча', 'Самка', 'Беспородная', 'KZC010824-0080716', '01.08.2024 12:06:53', '16.10.2020', 'Активный', 'Владелец животного', 'Мечение животного', 'И.П.  Малышева Л.Н.', 'Ветеринарная клиника', '01.08.2024', 'Усть-Каменогорск г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.890+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.892+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.893+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000062379', 'Кошка', 'Тигр', 'Самец', 'Беспородная', 'KZC010824-0080715', '01.08.2024 11:58:32', '01.04.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.893+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.895+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.896+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000166460', 'Кошка', 'Лавров', 'Самец', 'Метис', 'KZC010824-0080714', '01.08.2024 11:54:35', '03.10.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'TOO "Love Animals"', 'Ветеринарная клиника', '01.08.2024', 'Есиль р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.897+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.899+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.900+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000239156', 'Собака', 'Олег', 'Самец', 'Метис', 'KZD010824-0189603', '01.08.2024 11:53:08', '01.05.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Есиль р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.900+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.902+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.903+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000389292', 'Собака', 'Мартышка', 'Самка', 'Беспородная', 'KZD010824-0189602', '01.08.2024 11:51:54', '01.08.2022', 'Активный', 'Владелец животного', 'Мечение животного', 'ИП "VET ELITE"', 'Ветеринарная клиника', '01.08.2024', 'Ауэзовский р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.903+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.906+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.907+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000389340', 'Собака', 'Пума', 'Самка', 'Беспородная', 'KZD010824-0189601', '01.08.2024 11:49:55', '01.11.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'ИП "VET ELITE"', 'Ветеринарная клиника', '01.08.2024', 'Ауэзовский р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.908+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.910+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.911+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000389343', 'Собака', 'Аква', 'Самка', 'Метис', 'KZD010824-0189600', '01.08.2024 11:47:53', '20.02.2020', 'Активный', 'Владелец животного', 'Мечение животного', 'ИП "VET ELITE"', 'Ветеринарная клиника', '01.08.2024', 'Ауэзовский р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.911+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.913+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.914+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000389333', 'Собака', 'Даша', 'Самка', 'Беспородная', 'KZD010824-0189599', '01.08.2024 11:45:50', '19.01.2019', 'Активный', 'Владелец животного', 'Мечение животного', 'ИП "VET ELITE"', 'Ветеринарная клиника', '01.08.2024', 'Ауэзовский р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.915+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.917+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.918+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000389342', 'Собака', 'Ева', 'Самка', 'Беспородная', 'KZD010824-0189598', '01.08.2024 11:44:24', '10.11.2021', 'Активный', 'Владелец животного', 'Мечение животного', 'ИП "VET ELITE"', 'Ветеринарная клиника', '01.08.2024', 'Ауэзовский р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.918+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.920+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.922+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000389341', 'Собака', 'Марта', 'Самка', 'Беспородная', 'KZD010824-0189597', '01.08.2024 11:42:59', '24.03.2022', 'Активный', 'Владелец животного', 'Мечение животного', 'ИП "VET ELITE"', 'Ветеринарная клиника', '01.08.2024', 'Ауэзовский р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.923+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.925+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.927+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000061644', 'Кошка', 'Барсик', 'Самец', 'Британская короткошёрстная кошка', 'KZC010824-0080713', '01.08.2024 11:42:39', '01.04.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.927+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.931+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.933+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000101594', 'Кошка', 'Сальвадор', 'Самец', 'Сейшельская короткошерстная (Сиамский колор-пойнт)', 'KZC010824-0080712', '01.08.2024 11:41:14', '24.01.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'ИП Барыс Туғанбай Алмас Айдаралыұлы', 'Ветеринарная клиника', '01.08.2024', 'Байконыр г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.934+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.937+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.938+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000062043', 'Кошка', 'Кися', 'Самка', 'Британская короткошёрстная кошка', 'KZC010824-0080711', '01.08.2024 11:37:33', '01.04.2004', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.939+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.941+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.942+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000062059', 'Кошка', 'Снайпер', 'Самец', 'Беспородная', 'KZC010824-0080710', '01.08.2024 11:30:21', '01.02.2018', 'Активный', 'Владелец животного', 'Мечение животного', 'КГП на ПХВ "Астана ветсервис" акимата города Астаны', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Байконыр р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.942+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.944+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.945+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152084', 'Кошка', '-', 'Самка', 'Метис', 'KZC310724-0080709', '01.08.2024 11:23:47', '27.03.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.945+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.947+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.948+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152136', 'Кошка', '-', 'Самка', 'Метис', 'KZC310724-0080708', '01.08.2024 11:19:59', '23.05.2021', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.949+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.951+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.952+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152137', 'Кошка', '-', 'Самец', 'Метис', 'KZC310724-0080707', '01.08.2024 11:15:53', '08.04.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.952+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.954+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.955+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152141', 'Кошка', '-', 'Самка', 'Метис', 'KZC310724-0080706', '01.08.2024 11:11:17', '23.02.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.955+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.957+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.958+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000118895', 'Кошка', 'Альба', 'Самка', 'Беспородная', 'KZC010824-0080705', '01.08.2024 11:07:36', '10.05.2009', 'Черновик', 'Владелец животного', 'Мечение животного', 'TOO "Ветеринарный центр"', 'Ветеринарная клиника', '01.08.2024', 'Петропавловск г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.959+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.961+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.962+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152140', 'Кошка', '-', 'Самка', 'Метис', 'KZC310724-0080705', '01.08.2024 11:06:43', '09.04.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.962+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.964+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.965+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152135', 'Кошка', '-', 'Самка', 'Метис', 'KZC310724-0080704', '01.08.2024 11:03:00', '27.04.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.965+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.967+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.968+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000259636', 'Собака', '9636', 'Самец', 'Беспородная', 'KZD300724-0189596', '01.08.2024 11:00:28', '25.05.2023', 'Активный', 'Безнадзорное', 'Мечение животного', 'Общественное объединение "Надежда плюс kst"', 'Реабилитационный центр для животных', '30.07.2024', 'Костанай г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.969+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.971+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.972+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152134', 'Кошка', '-', 'Самка', 'Метис', 'KZC310724-0080703', '01.08.2024 10:56:27', '23.05.2021', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.972+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.974+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.975+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152127', 'Кошка', '-', 'Самка', 'Метис', 'KZC310724-0080702', '01.08.2024 10:53:05', '01.02.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.975+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.978+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.979+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000531349', 'Собака', 'Ақтөс', 'Самец', 'Беспородная', 'KZD010824-0189595', '01.08.2024 10:39:54', '30.05.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Ветеринарная служба» управления ветеринарии Туркестанской области', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Кентау г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.980+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.982+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.983+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000530540', 'Собака', 'Атаман', 'Самец', 'Беспородная', 'KZD010824-0189594', '01.08.2024 10:38:10', '19.10.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Ветеринарная служба» управления ветеринарии Туркестанской области', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Шардаринский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.983+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.985+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.986+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000530539', 'Собака', 'Көксерек', 'Самец', 'Беспородная', 'KZD010824-0189593', '01.08.2024 10:27:04', '22.12.2022', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Ветеринарная служба» управления ветеринарии Туркестанской области', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Шардаринский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.986+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.988+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.989+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000530538', 'Собака', 'Барбос', 'Самец', 'Беспородная', 'KZD010824-0189592', '01.08.2024 10:12:13', '23.02.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Ветеринарная служба» управления ветеринарии Туркестанской области', 'Ветеринарная станция/служба/сервис', '01.08.2024', 'Шардаринский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.990+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.992+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.993+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000152132', 'Кошка', '-', 'Самка', 'Метис', 'KZC010824-0080700', '01.08.2024 10:11:48', '01.03.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП Әлібек', 'Ветеринарная клиника', '01.08.2024', 'Алматы р.а.', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:56.993+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.995+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:56.996+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000264212', 'Собака', '-', 'Самка', 'Метис', 'KZD310724-0189591', '01.08.2024 9:57:50', '01.06.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Павлодарская областная ветеринарная станция» управления ветеринарии Павлодарской области', 'Служба отлова', '31.07.2024', 'Павлодар г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:56.997+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:56.999+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.000+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000382350', 'Собака', 'Арчи', 'Самец', 'Эрдельтерьер', 'KZD010824-0189590', '01.08.2024 9:44:38', '28.03.2019', 'Активный', 'Владелец животного', 'Мечение животного', 'TOO "Вет-Сервис"', 'Ветеринарная клиника', '01.08.2024', 'Кызылорда г.а.', '01.08.2024', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.000+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.002+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.003+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476466', 'Собака', 'Кеба', 'Самец', 'Беспородная', 'KZD010824-0189589', '01.08.2024 9:21:49', '22.07.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.004+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.006+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.007+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476468', 'Собака', 'Алапар', 'Самец', 'Беспородная', 'KZD010824-0189588', '01.08.2024 9:16:45', '30.12.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.007+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.009+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.010+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476467', 'Собака', 'Пятак', 'Самка', 'Беспородная', 'KZD010824-0189587', '01.08.2024 9:11:13', '15.07.2021', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.011+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.013+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.014+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476469', 'Собака', 'Цира', 'Самка', 'Беспородная', 'KZD010824-0189586', '01.08.2024 9:07:34', '13.09.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.014+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.016+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.017+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476479', 'Собака', 'Клера', 'Самка', 'Беспородная', 'KZD010824-0189585', '01.08.2024 9:02:09', '17.05.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.018+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.020+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.021+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476480', 'Собака', 'Яныч', 'Самец', 'Беспородная', 'KZD010824-0189584', '01.08.2024 8:56:59', '20.09.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.021+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.023+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.024+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476482', 'Собака', 'Непар', 'Самец', 'Беспородная', 'KZD010824-0189583', '01.08.2024 8:53:35', '19.08.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.025+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.028+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.029+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476475', 'Собака', 'Дора', 'Самец', 'Беспородная', 'KZD010824-0189582', '01.08.2024 8:49:11', '12.09.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.029+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.032+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.033+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476120', 'Собака', 'Черри', 'Самец', 'Беспородная', 'KZD010824-0189581', '01.08.2024 8:39:44', '08.03.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.033+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.035+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.036+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476119', 'Собака', 'Барби', 'Самка', 'Беспородная', 'KZD010824-0189580', '01.08.2024 8:36:21', '23.09.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '01.08.2024', 'Сарыагашский район', 'Не вакцинирован', '01.08.2024')
+[2024-08-01T11:13:57.037+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.039+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.040+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000115408', 'Собака', 'нет', 'Самка', 'Беспородная', 'KZD300724-0189579', '01.08.2024 0:06:29', '08.02.2023', 'Активный', 'Бродячее', 'Мечение животного', 'Государственное коммунальное предприятие "Кобдинская районная ветеринарная станция" на праве хозяйственного ведения ГУ "Управление ветеринарии Актюбинской области"', 'Пункт временного содержания животных', '30.07.2024', 'Хобдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.040+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.042+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.043+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000115407', 'Собака', 'нет', 'Самка', 'Беспородная', 'KZD300724-0189578', '31.07.2024 23:56:21', '15.02.2023', 'Активный', 'Бродячее', 'Мечение животного', 'Государственное коммунальное предприятие "Кобдинская районная ветеринарная станция" на праве хозяйственного ведения ГУ "Управление ветеринарии Актюбинской области"', 'Пункт временного содержания животных', '30.07.2024', 'Хобдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.044+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.046+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.047+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('', 'Кошка', 'Айрис', 'Самка', 'Шотландская вислоухая кошка (скоттиш-фолд)', 'KZC310724-0080701', '31.07.2024 23:34:37', '22.11.2021', 'Создан владельцем', 'Владелец животного', 'Рождение животного', '', '', '31.07.2024', 'Актобе г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.047+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.049+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.051+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000115406', 'Собака', 'нет', 'Самка', 'Беспородная', 'KZD290724-0189577', '31.07.2024 23:25:25', '24.02.2023', 'Активный', 'Бродячее', 'Мечение животного', 'Государственное коммунальное предприятие "Кобдинская районная ветеринарная станция" на праве хозяйственного ведения ГУ "Управление ветеринарии Актюбинской области"', 'Пункт временного содержания животных', '29.07.2024', 'Хобдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.051+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.053+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.054+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000115405', 'Собака', 'нет', 'Самка', 'Беспородная', 'KZD290724-0189576', '31.07.2024 23:11:29', '01.06.2024', 'Активный', 'Бродячее', 'Мечение животного', 'Государственное коммунальное предприятие "Кобдинская районная ветеринарная станция" на праве хозяйственного ведения ГУ "Управление ветеринарии Актюбинской области"', 'Пункт временного содержания животных', '29.07.2024', 'Хобдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.055+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.058+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.060+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000144036', 'Кошка', 'Космонавтов 1', 'Самец', 'Беспородная', 'KZC310724-0080700', '31.07.2024 22:59:47', '08.04.2021', 'Активный', 'Бродячее', 'Мечение животного', 'Общественный Фонд "Четыре лапы плюс"', 'Приют для животных', '31.07.2024', 'Семей г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.061+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.065+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.067+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000144052', 'Кошка', 'Космонавтов 3', 'Самка', 'Беспородная', 'KZC310724-0080699', '31.07.2024 22:56:56', '07.02.2020', 'Активный', 'Бродячее', 'Мечение животного', 'Общественный Фонд "Четыре лапы плюс"', 'Приют для животных', '31.07.2024', 'Семей г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.068+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.071+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.073+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000115404', 'Собака', 'нет', 'Самка', 'Беспородная', 'KZD290724-0189575', '31.07.2024 22:55:10', '05.07.2023', 'Активный', 'Бродячее', 'Мечение животного', 'Государственное коммунальное предприятие "Кобдинская районная ветеринарная станция" на праве хозяйственного ведения ГУ "Управление ветеринарии Актюбинской области"', 'Пункт временного содержания животных', '29.07.2024', 'Хобдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.074+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.076+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.078+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000144195', 'Кошка', 'Кирпичный', 'Самка', 'Беспородная', 'KZC310724-0080698', '31.07.2024 22:54:06', '05.03.2022', 'Активный', 'Бродячее', 'Мечение животного', 'Общественный Фонд "Четыре лапы плюс"', 'Приют для животных', '31.07.2024', 'Семей г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.078+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.081+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.082+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000144184', 'Кошка', 'Герцена 52', 'Самка', 'Беспородная', 'KZC310724-0080697', '31.07.2024 22:51:04', '04.04.2022', 'Активный', 'Бродячее', 'Мечение животного', 'Общественный Фонд "Четыре лапы плюс"', 'Приют для животных', '31.07.2024', 'Семей г.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.083+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.085+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.087+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000115403', 'Собака', 'нет', 'Самка', 'Беспородная', 'KZD290724-0189574', '31.07.2024 22:36:05', '21.07.2021', 'Активный', 'Бродячее', 'Мечение животного', 'Государственное коммунальное предприятие "Кобдинская районная ветеринарная станция" на праве хозяйственного ведения ГУ "Управление ветеринарии Актюбинской области"', 'Пункт временного содержания животных', '29.07.2024', 'Хобдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.087+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.089+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.090+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000115402', 'Собака', 'нет', 'Самка', 'Беспородная', 'KZD290724-0189573', '31.07.2024 22:26:08', '22.07.2020', 'Активный', 'Бродячее', 'Мечение животного', 'Государственное коммунальное предприятие "Кобдинская районная ветеринарная станция" на праве хозяйственного ведения ГУ "Управление ветеринарии Актюбинской области"', 'Пункт временного содержания животных', '29.07.2024', 'Хобдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.090+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.092+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.093+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000115401', 'Собака', 'нет', 'Самец', 'Беспородная', 'KZD290724-0189572', '31.07.2024 22:07:01', '15.07.2021', 'Активный', 'Бродячее', 'Мечение животного', 'Государственное коммунальное предприятие "Кобдинская районная ветеринарная станция" на праве хозяйственного ведения ГУ "Управление ветеринарии Актюбинской области"', 'Пункт временного содержания животных', '29.07.2024', 'Хобдинский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.094+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.096+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.098+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000099391', 'Кошка', 'Персик', 'Самец', 'Метис', 'KZC310724-0080696', '31.07.2024 20:15:03', '20.04.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'TOO "ФИРМА ЗАМАН"', 'Ветеринарная клиника', '31.07.2024', 'Осакаровский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.098+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.100+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.101+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000240610', 'Собака', '-', 'Самка', 'Метис', 'KZD310724-0189571', '31.07.2024 19:31:44', '11.03.2021', 'На передаче', 'Бродячее', 'Мечение животного', 'Общественный фонд "ASENYKA"', 'Приют для животных', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.101+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.103+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.104+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000240614', 'Собака', '-', 'Самка', 'Метис', 'KZD310724-0189570', '31.07.2024 19:25:01', '18.03.2021', 'На передаче', 'Бродячее', 'Мечение животного', 'Общественный фонд "ASENYKA"', 'Приют для животных', '31.07.2024', 'Алматы р.а.', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.105+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.107+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.108+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000156432', 'Кошка', 'Фин', 'Самец', 'Ангорская кошка (Турецкая ангора)', 'KZC310724-0080695', '31.07.2024 19:20:27', '04.08.2014', 'Активный', 'Владелец животного', 'Мечение животного', 'Производственный кооператив "Ветпрепарат"', 'Ветеринарная клиника', '31.07.2024', 'Сарыарка р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.108+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.110+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.111+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476121', 'Собака', 'Робби', 'Самец', 'Беспородная', 'KZD310724-0189569', '31.07.2024 18:54:01', '20.09.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.112+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.113+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.114+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476108', 'Собака', 'Чипа', 'Самец', 'Беспородная', 'KZD310724-0189568', '31.07.2024 18:50:33', '24.08.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.115+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.117+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.118+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476115', 'Собака', 'Этион', 'Самец', 'Беспородная', 'KZD310724-0189567', '31.07.2024 18:46:24', '16.06.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.118+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.120+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.121+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476118', 'Собака', 'Нео', 'Самец', 'Беспородная', 'KZD310724-0189566', '31.07.2024 18:37:59', '28.09.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.121+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.123+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.124+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476124', 'Собака', 'Фара', 'Самец', 'Беспородная', 'KZD310724-0189565', '31.07.2024 18:34:27', '23.11.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.125+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.127+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.128+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476123', 'Собака', 'Керчи', 'Самец', 'Беспородная', 'KZD310724-0189564', '31.07.2024 18:30:05', '26.11.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.128+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.130+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.131+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476122', 'Собака', 'Двойка', 'Самец', 'Беспородная', 'KZD310724-0189563', '31.07.2024 18:26:17', '29.07.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.131+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.133+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.134+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476107', 'Собака', 'Янчук', 'Самка', 'Беспородная', 'KZD310724-0189562', '31.07.2024 18:22:36', '18.10.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.135+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.137+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.138+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000359245', 'Собака', 'без клички', 'Самка', 'Беспородная', 'KZD300724-0189561', '31.07.2024 18:20:26', '25.01.2024', 'Активный', 'Бродячее', 'Мечение животного', 'КГП "Ветеринарная станция Костанайского района" Управления ветеринарии акимата Костанайской области', 'Ветеринарная станция/служба/сервис', '30.07.2024', 'Костанайский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.138+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.140+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.141+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476105', 'Собака', 'Корол', 'Самка', 'Беспородная', 'KZD310724-0189560', '31.07.2024 18:19:29', '13.09.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.141+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.143+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.144+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000530537', 'Собака', 'Есенай', 'Самец', 'Беспородная', 'KZD310724-0189559', '31.07.2024 18:17:57', '08.03.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Ветеринарная служба» управления ветеринарии Туркестанской области', 'Ветеринарная станция/служба/сервис', '31.07.2024', 'Шардаринский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.145+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.147+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.149+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000359232', 'Собака', 'без клички', 'Самка', 'Беспородная', 'KZD300724-0189558', '31.07.2024 18:17:44', '11.05.2022', 'Активный', 'Бродячее', 'Мечение животного', 'КГП "Ветеринарная станция Костанайского района" Управления ветеринарии акимата Костанайской области', 'Ветеринарная станция/служба/сервис', '30.07.2024', 'Костанайский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.150+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.155+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.157+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476106', 'Собака', 'Чимба', 'Самец', 'Беспородная', 'KZD310724-0189557', '31.07.2024 18:16:12', '17.11.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.159+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.167+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.173+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000359236', 'Собака', 'без клички', 'Самка', 'Беспородная', 'KZD300724-0189556', '31.07.2024 18:14:47', '07.02.2024', 'Активный', 'Бродячее', 'Мечение животного', 'КГП "Ветеринарная станция Костанайского района" Управления ветеринарии акимата Костанайской области', 'Ветеринарная станция/служба/сервис', '30.07.2024', 'Костанайский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.174+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.180+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.182+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476112', 'Собака', 'Зорро', 'Самец', 'Беспородная', 'KZD310724-0189555', '31.07.2024 18:12:50', '19.07.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.183+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.187+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.189+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476117', 'Собака', 'Керн', 'Самец', 'Беспородная', 'KZD310724-0189554', '31.07.2024 18:08:17', '09.04.2022', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.190+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.194+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.196+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000530533', 'Собака', 'Лия', 'Самка', 'Беспородная', 'KZD310724-0189553', '31.07.2024 18:07:31', '03.01.2024', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Ветеринарная служба» управления ветеринарии Туркестанской области', 'Ветеринарная станция/служба/сервис', '31.07.2024', 'Шардаринский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.197+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.201+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.203+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000476116', 'Собака', 'Барри', 'Самец', 'Беспородная', 'KZD310724-0189552', '31.07.2024 18:04:14', '24.01.2023', 'Активный', 'Бродячее', 'Мечение животного', 'ИП"Пердибаев Г.М"', 'Ветеринарная клиника', '31.07.2024', 'Сарыагашский район', 'Не вакцинирован', '31.07.2024')
+[2024-08-01T11:13:57.203+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.207+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.208+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000530532', 'Собака', 'Ишак', 'Самка', 'Беспородная', 'KZD310724-0189551', '31.07.2024 18:00:55', '10.02.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Ветеринарная служба» управления ветеринарии Туркестанской области', 'Ветеринарная станция/служба/сервис', '31.07.2024', 'Шардаринский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.209+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.212+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.213+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000359223', 'Собака', 'без клички', 'Самец', 'Беспородная', 'KZD300724-0189550', '31.07.2024 18:00:03', '07.02.2024', 'Активный', 'Бродячее', 'Мечение животного', 'КГП "Ветеринарная станция Костанайского района" Управления ветеринарии акимата Костанайской области', 'Ветеринарная станция/служба/сервис', '30.07.2024', 'Костанайский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.214+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.217+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.219+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000359266', 'Собака', 'без клички', 'Самка', 'Беспородная', 'KZD300724-0189549', '31.07.2024 17:56:01', '04.08.2021', 'Активный', 'Бродячее', 'Мечение животного', 'КГП "Ветеринарная станция Костанайского района" Управления ветеринарии акимата Костанайской области', 'Ветеринарная станция/служба/сервис', '30.07.2024', 'Костанайский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.219+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.223+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.225+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000359257', 'Собака', 'без клички', 'Самка', 'Беспородная', 'KZD310724-0189548', '31.07.2024 17:50:15', '06.03.2024', 'Активный', 'Бродячее', 'Мечение животного', 'КГП "Ветеринарная станция Костанайского района" Управления ветеринарии акимата Костанайской области', 'Ветеринарная станция/служба/сервис', '31.07.2024', 'Костанайский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.226+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.229+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T11:13:57.231+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398010000530534', 'Собака', 'Шишка', 'Самка', 'Беспородная', 'KZD310724-0189547', '31.07.2024 17:43:51', '07.12.2023', 'Активный', 'Владелец животного', 'Мечение животного', 'ГКП на ПХВ «Ветеринарная служба» управления ветеринарии Туркестанской области', 'Ветеринарная станция/служба/сервис', '31.07.2024', 'Шардаринский район', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T11:13:57.231+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T11:13:57.232+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-01T11:13:57.232+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-01T11:13:57.238+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=kezekte_etl, task_id=transform_data, run_id=manual__2024-08-01T11:13:45.127849+00:00, execution_date=20240801T111345, start_date=20240801T111356, end_date=20240801T111357
+[2024-08-01T11:13:57.292+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-01T11:13:57.310+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-01T11:13:57.311+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,27 @@
+[2024-08-01T10:21:55.421+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-01T10:21:55.446+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kezekte_etl.transform_data manual__2024-08-01T10:21:47.857177+00:00 [queued]>
+[2024-08-01T10:21:55.454+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kezekte_etl.transform_data manual__2024-08-01T10:21:47.857177+00:00 [queued]>
+[2024-08-01T10:21:55.455+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-01T10:21:55.469+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform_data> on 2024-08-01 10:21:47.857177+00:00
+[2024-08-01T10:21:55.493+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=128) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-08-01T10:21:55.498+0000] {standard_task_runner.py:63} INFO - Started process 130 to run task
+[2024-08-01T10:21:55.498+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'kezekte_etl', 'transform_data', 'manual__2024-08-01T10:21:47.857177+00:00', '--job-id', '88', '--raw', '--subdir', 'DAGS_FOLDER/kezekte_etl.py', '--cfg-path', '/tmp/tmp7ifa46n6']
+[2024-08-01T10:21:55.501+0000] {standard_task_runner.py:91} INFO - Job 88: Subtask transform_data
+[2024-08-01T10:21:55.543+0000] {task_command.py:426} INFO - Running <TaskInstance: kezekte_etl.transform_data manual__2024-08-01T10:21:47.857177+00:00 [running]> on host cd4398d9193e
+[2024-08-01T10:21:55.654+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kezekte_etl' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2024-08-01T10:21:47.857177+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-01T10:21:47.857177+00:00'
+[2024-08-01T10:21:55.658+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-01T10:21:55.708+0000] {base.py:84} INFO - Using connection ID 'postgresql_conn' for task execution.
+[2024-08-01T10:21:55.717+0000] {sql.py:487} INFO - Running statement: 
+            insert into raw_animals (chip_id, type, nickname, gender, breed, passport_number, register_date, birthday, status, ownership, 
+                                    register_type, tagging_location, tagging_place, tagging_date, district_area, date_vaccination, date_sterilization_castration)
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        , parameters: ('398020000141060', 'Кошка', 'Мелкая', 'Самка', 'Беспородная', 'KZC010824-0080722', '01.08.2024 13:08:22', '08.07.2022', 'Черновик', 'Волонтер', 'Мечение животного', 'TOO "AllVet"', 'Ветеринарная клиника', '01.08.2024', 'Алмалинский р.а.', 'Не вакцинирован', 'Не стерилизован/кастрирован')
+[2024-08-01T10:21:55.721+0000] {sql.py:496} INFO - Rows affected: 1
+[2024-08-01T10:21:55.723+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-01T10:21:55.725+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-01T10:21:55.736+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=kezekte_etl, task_id=transform_data, run_id=manual__2024-08-01T10:21:47.857177+00:00, execution_date=20240801T102147, start_date=20240801T102155, end_date=20240801T102155
+[2024-08-01T10:21:55.806+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-01T10:21:55.833+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-01T10:21:55.836+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
