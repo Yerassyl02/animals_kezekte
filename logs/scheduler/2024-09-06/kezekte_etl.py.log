@@ -796,3 +796,45 @@
 [2024-09-06T12:44:40.729+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:44:40.728+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-09-06T12:44:40.744+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:44:40.744+0000] {dag.py:3954} INFO - Setting next_dagrun for kezekte_etl to 2024-09-06 00:00:00+00:00, run_after=2024-09-07 00:00:00+00:00
 [2024-09-06T12:44:40.761+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kezekte_etl.py took 0.123 seconds
+[2024-09-06T12:45:11.067+0000] {processor.py:161} INFO - Started process (PID=589) to work on /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:45:11.074+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kezekte_etl.py for tasks to queue
+[2024-09-06T12:45:11.077+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:45:11.076+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:45:11.148+0000] {processor.py:840} INFO - DAG(s) 'kezekte_etl' retrieved from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:45:11.205+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:45:11.205+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-06T12:45:11.218+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:45:11.218+0000] {dag.py:3954} INFO - Setting next_dagrun for kezekte_etl to 2024-09-06 00:00:00+00:00, run_after=2024-09-07 00:00:00+00:00
+[2024-09-06T12:45:11.227+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kezekte_etl.py took 0.182 seconds
+[2024-09-06T12:45:41.396+0000] {processor.py:161} INFO - Started process (PID=596) to work on /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:45:41.401+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kezekte_etl.py for tasks to queue
+[2024-09-06T12:45:41.404+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:45:41.404+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:45:41.489+0000] {processor.py:840} INFO - DAG(s) 'kezekte_etl' retrieved from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:45:41.508+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:45:41.508+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-06T12:45:41.521+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:45:41.521+0000] {dag.py:3954} INFO - Setting next_dagrun for kezekte_etl to 2024-09-06 00:00:00+00:00, run_after=2024-09-07 00:00:00+00:00
+[2024-09-06T12:45:41.529+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kezekte_etl.py took 0.143 seconds
+[2024-09-06T12:46:11.775+0000] {processor.py:161} INFO - Started process (PID=603) to work on /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:46:11.777+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kezekte_etl.py for tasks to queue
+[2024-09-06T12:46:11.780+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:46:11.780+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:46:11.863+0000] {processor.py:840} INFO - DAG(s) 'kezekte_etl' retrieved from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:46:11.879+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:46:11.879+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-06T12:46:11.891+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:46:11.891+0000] {dag.py:3954} INFO - Setting next_dagrun for kezekte_etl to 2024-09-06 00:00:00+00:00, run_after=2024-09-07 00:00:00+00:00
+[2024-09-06T12:46:11.899+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kezekte_etl.py took 0.133 seconds
+[2024-09-06T12:46:42.131+0000] {processor.py:161} INFO - Started process (PID=610) to work on /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:46:42.134+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kezekte_etl.py for tasks to queue
+[2024-09-06T12:46:42.141+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:46:42.140+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:46:42.208+0000] {processor.py:840} INFO - DAG(s) 'kezekte_etl' retrieved from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:46:42.223+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:46:42.223+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-06T12:46:42.234+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:46:42.234+0000] {dag.py:3954} INFO - Setting next_dagrun for kezekte_etl to 2024-09-06 00:00:00+00:00, run_after=2024-09-07 00:00:00+00:00
+[2024-09-06T12:46:42.241+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kezekte_etl.py took 0.126 seconds
+[2024-09-06T12:47:12.458+0000] {processor.py:161} INFO - Started process (PID=617) to work on /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:47:12.460+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kezekte_etl.py for tasks to queue
+[2024-09-06T12:47:12.463+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:47:12.463+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:47:12.526+0000] {processor.py:840} INFO - DAG(s) 'kezekte_etl' retrieved from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:47:12.561+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:47:12.561+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-06T12:47:12.574+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:47:12.573+0000] {dag.py:3954} INFO - Setting next_dagrun for kezekte_etl to 2024-09-06 00:00:00+00:00, run_after=2024-09-07 00:00:00+00:00
+[2024-09-06T12:47:12.581+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kezekte_etl.py took 0.132 seconds
+[2024-09-06T12:47:42.803+0000] {processor.py:161} INFO - Started process (PID=624) to work on /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:47:42.807+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kezekte_etl.py for tasks to queue
+[2024-09-06T12:47:42.809+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:47:42.809+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:47:42.870+0000] {processor.py:840} INFO - DAG(s) 'kezekte_etl' retrieved from /opt/airflow/dags/kezekte_etl.py
+[2024-09-06T12:47:42.900+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:47:42.899+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-09-06T12:47:42.921+0000] {logging_mixin.py:188} INFO - [2024-09-06T12:47:42.920+0000] {dag.py:3954} INFO - Setting next_dagrun for kezekte_etl to 2024-09-06 00:00:00+00:00, run_after=2024-09-07 00:00:00+00:00
+[2024-09-06T12:47:42.929+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kezekte_etl.py took 0.134 seconds
