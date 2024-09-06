@@ -7,6 +7,24 @@ This project is a full-fledged analogue of the ETL process. Open data from the p
 
 ## Getting Started
 
+#### Installing and activating a virtual environment
+Before starting a project, it is recommended to create and activate a virtual environment (venv) to isolate the project's dependencies:
+
+##### **Creating a virtual environment**:
+```
+python3 -m venv venv
+```
+
+##### Activating the virtual environment:
+- On Windows:
+    ```
+    .\venv\Scripts\activate
+    ```
+- On macOS/Linux:
+    ```
+    source venv/bin/activate
+    ```
+After activating the virtual environment, all dependencies will be installed into it.
 #### Building the Docker Images
 To build the Docker images, navigate to the root directory of the project in your terminal and run the following command in background:
 
