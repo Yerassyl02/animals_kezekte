@@ -17,7 +17,7 @@ default_args = {
 def page_scrap():
     i = 0
     rows = []
-    while i < 25:
+    while i < 15:
         i += 1
         url = f'https://tanba.kezekte.kz/ru/frameless/animal/list?p={i}'
 
